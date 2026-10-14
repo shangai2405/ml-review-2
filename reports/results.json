@@ -1,0 +1,477 @@
+{
+  "classification": {
+    "comparison": [
+      {
+        "Model": "Logistic Regression",
+        "Part": "A (Review 1)",
+        "Accuracy": 0.965,
+        "Precision (weighted)": 0.965,
+        "Recall (weighted)": 0.965,
+        "F1 (weighted)": 0.965,
+        "ROC-AUC (OvR)": 0.9987,
+        "Train time (s)": 0.028
+      },
+      {
+        "Model": "MLP (Neural Net)",
+        "Part": "B (Review 2)",
+        "Accuracy": 0.9275,
+        "Precision (weighted)": 0.9286,
+        "Recall (weighted)": 0.9275,
+        "F1 (weighted)": 0.9275,
+        "ROC-AUC (OvR)": 0.9941,
+        "Train time (s)": 1.559
+      },
+      {
+        "Model": "Gradient Boosting",
+        "Part": "B (Review 2)",
+        "Accuracy": 0.9125,
+        "Precision (weighted)": 0.9124,
+        "Recall (weighted)": 0.9125,
+        "F1 (weighted)": 0.9123,
+        "ROC-AUC (OvR)": 0.9896,
+        "Train time (s)": 1.799
+      },
+      {
+        "Model": "Bagging",
+        "Part": "B (Review 2)",
+        "Accuracy": 0.8975,
+        "Precision (weighted)": 0.8978,
+        "Recall (weighted)": 0.8975,
+        "F1 (weighted)": 0.8976,
+        "ROC-AUC (OvR)": 0.9877,
+        "Train time (s)": 1.93
+      },
+      {
+        "Model": "SVM (SVC)",
+        "Part": "A (Review 1)",
+        "Accuracy": 0.895,
+        "Precision (weighted)": 0.8969,
+        "Recall (weighted)": 0.895,
+        "F1 (weighted)": 0.8956,
+        "ROC-AUC (OvR)": 0.9833,
+        "Train time (s)": 0.484
+      },
+      {
+        "Model": "Random Forest",
+        "Part": "B (Review 2)",
+        "Accuracy": 0.88,
+        "Precision (weighted)": 0.8796,
+        "Recall (weighted)": 0.88,
+        "F1 (weighted)": 0.8797,
+        "ROC-AUC (OvR)": 0.9767,
+        "Train time (s)": 0.311
+      },
+      {
+        "Model": "Decision Tree",
+        "Part": "A (Review 1)",
+        "Accuracy": 0.83,
+        "Precision (weighted)": 0.8319,
+        "Recall (weighted)": 0.83,
+        "F1 (weighted)": 0.8302,
+        "ROC-AUC (OvR)": 0.8867,
+        "Train time (s)": 0.029
+      },
+      {
+        "Model": "Naive Bayes",
+        "Part": "A (Review 1)",
+        "Accuracy": 0.81,
+        "Precision (weighted)": 0.8113,
+        "Recall (weighted)": 0.81,
+        "F1 (weighted)": 0.8105,
+        "ROC-AUC (OvR)": 0.9506,
+        "Train time (s)": 0.02
+      },
+      {
+        "Model": "KNN",
+        "Part": "A (Review 1)",
+        "Accuracy": 0.5,
+        "Precision (weighted)": 0.5211,
+        "Recall (weighted)": 0.5,
+        "F1 (weighted)": 0.5054,
+        "ROC-AUC (OvR)": 0.7697,
+        "Train time (s)": 0.119
+      },
+      {
+        "Model": "AdaBoost",
+        "Part": "B (Review 2)",
+        "Accuracy": 0.49,
+        "Precision (weighted)": 0.4831,
+        "Recall (weighted)": 0.49,
+        "F1 (weighted)": 0.4437,
+        "ROC-AUC (OvR)": 0.82,
+        "Train time (s)": 0.185
+      }
+    ],
+    "tuning": [
+      {
+        "Model": "SVM (SVC)",
+        "Part": "A (Review 1)",
+        "Best params": "C=10, kernel=linear",
+        "CV F1 (5-fold)": 0.965,
+        "CV F1 std": 0.0068,
+        "Accuracy before": 0.895,
+        "Accuracy after": 0.975,
+        "F1 before": 0.8956,
+        "F1 after": 0.975,
+        "ROC-AUC before": 0.9833,
+        "ROC-AUC after": 0.9994
+      },
+      {
+        "Model": "Logistic Regression",
+        "Part": "A (Review 1)",
+        "Best params": "C=100",
+        "CV F1 (5-fold)": 0.9632,
+        "CV F1 std": 0.0054,
+        "Accuracy before": 0.965,
+        "Accuracy after": 0.9825,
+        "F1 before": 0.965,
+        "F1 after": 0.9825,
+        "ROC-AUC before": 0.9987,
+        "ROC-AUC after": 0.9991
+      },
+      {
+        "Model": "MLP (Neural Net)",
+        "Part": "B (Review 2)",
+        "Best params": "activation=tanh, hidden_layer_sizes=(128, 64)",
+        "CV F1 (5-fold)": 0.9549,
+        "CV F1 std": 0.0048,
+        "Accuracy before": 0.9275,
+        "Accuracy after": 0.9575,
+        "F1 before": 0.9275,
+        "F1 after": 0.9575,
+        "ROC-AUC before": 0.9941,
+        "ROC-AUC after": 0.998
+      },
+      {
+        "Model": "AdaBoost",
+        "Part": "B (Review 2)",
+        "Best params": "estimator=DecisionTree(max_depth=3), learning_rate=0.5, n_estimators=200",
+        "CV F1 (5-fold)": 0.9199,
+        "CV F1 std": 0.018,
+        "Accuracy before": 0.49,
+        "Accuracy after": 0.9375,
+        "F1 before": 0.4437,
+        "F1 after": 0.9377,
+        "ROC-AUC before": 0.82,
+        "ROC-AUC after": 0.9933
+      },
+      {
+        "Model": "Gradient Boosting",
+        "Part": "B (Review 2)",
+        "Best params": "learning_rate=0.1, max_depth=2, n_estimators=300",
+        "CV F1 (5-fold)": 0.9034,
+        "CV F1 std": 0.017,
+        "Accuracy before": 0.9125,
+        "Accuracy after": 0.9375,
+        "F1 before": 0.9123,
+        "F1 after": 0.9374,
+        "ROC-AUC before": 0.9896,
+        "ROC-AUC after": 0.9923
+      },
+      {
+        "Model": "Bagging",
+        "Part": "B (Review 2)",
+        "Best params": "max_features=1.0, max_samples=1.0, n_estimators=100",
+        "CV F1 (5-fold)": 0.8868,
+        "CV F1 std": 0.0185,
+        "Accuracy before": 0.8975,
+        "Accuracy after": 0.8975,
+        "F1 before": 0.8976,
+        "F1 after": 0.8976,
+        "ROC-AUC before": 0.9877,
+        "ROC-AUC after": 0.9877
+      },
+      {
+        "Model": "Random Forest",
+        "Part": "B (Review 2)",
+        "Best params": "max_depth=10, n_estimators=300",
+        "CV F1 (5-fold)": 0.8728,
+        "CV F1 std": 0.0297,
+        "Accuracy before": 0.88,
+        "Accuracy after": 0.8875,
+        "F1 before": 0.8797,
+        "F1 after": 0.8872,
+        "ROC-AUC before": 0.9767,
+        "ROC-AUC after": 0.9804
+      },
+      {
+        "Model": "Decision Tree",
+        "Part": "A (Review 1)",
+        "Best params": "max_depth=8, min_samples_leaf=10",
+        "CV F1 (5-fold)": 0.8372,
+        "CV F1 std": 0.0158,
+        "Accuracy before": 0.83,
+        "Accuracy after": 0.8375,
+        "F1 before": 0.8302,
+        "F1 after": 0.837,
+        "ROC-AUC before": 0.8867,
+        "ROC-AUC after": 0.9511
+      },
+      {
+        "Model": "Naive Bayes",
+        "Part": "A (Review 1)",
+        "Best params": "var_smoothing=1e-11",
+        "CV F1 (5-fold)": 0.8044,
+        "CV F1 std": 0.0271,
+        "Accuracy before": 0.81,
+        "Accuracy after": 0.81,
+        "F1 before": 0.8105,
+        "F1 after": 0.8105,
+        "ROC-AUC before": 0.9506,
+        "ROC-AUC after": 0.9506
+      },
+      {
+        "Model": "KNN",
+        "Part": "A (Review 1)",
+        "Best params": "metric=manhattan, n_neighbors=31",
+        "CV F1 (5-fold)": 0.6639,
+        "CV F1 std": 0.0168,
+        "Accuracy before": 0.5,
+        "Accuracy after": 0.72,
+        "F1 before": 0.5054,
+        "F1 after": 0.7203,
+        "ROC-AUC before": 0.7697,
+        "ROC-AUC after": 0.8792
+      }
+    ],
+    "final": [
+      {
+        "Model": "Logistic Regression",
+        "Part": "A (Review 1)",
+        "Accuracy": 0.9825,
+        "Precision (weighted)": 0.9826,
+        "Recall (weighted)": 0.9825,
+        "F1 (weighted)": 0.9825,
+        "ROC-AUC (OvR)": 0.9991
+      },
+      {
+        "Model": "SVM (SVC)",
+        "Part": "A (Review 1)",
+        "Accuracy": 0.975,
+        "Precision (weighted)": 0.975,
+        "Recall (weighted)": 0.975,
+        "F1 (weighted)": 0.975,
+        "ROC-AUC (OvR)": 0.9994
+      },
+      {
+        "Model": "MLP (Neural Net)",
+        "Part": "B (Review 2)",
+        "Accuracy": 0.9575,
+        "Precision (weighted)": 0.9576,
+        "Recall (weighted)": 0.9575,
+        "F1 (weighted)": 0.9575,
+        "ROC-AUC (OvR)": 0.998
+      },
+      {
+        "Model": "AdaBoost",
+        "Part": "B (Review 2)",
+        "Accuracy": 0.9375,
+        "Precision (weighted)": 0.9383,
+        "Recall (weighted)": 0.9375,
+        "F1 (weighted)": 0.9377,
+        "ROC-AUC (OvR)": 0.9933
+      },
+      {
+        "Model": "Gradient Boosting",
+        "Part": "B (Review 2)",
+        "Accuracy": 0.9375,
+        "Precision (weighted)": 0.9374,
+        "Recall (weighted)": 0.9375,
+        "F1 (weighted)": 0.9374,
+        "ROC-AUC (OvR)": 0.9923
+      },
+      {
+        "Model": "Bagging",
+        "Part": "B (Review 2)",
+        "Accuracy": 0.8975,
+        "Precision (weighted)": 0.8978,
+        "Recall (weighted)": 0.8975,
+        "F1 (weighted)": 0.8976,
+        "ROC-AUC (OvR)": 0.9877
+      },
+      {
+        "Model": "Random Forest",
+        "Part": "B (Review 2)",
+        "Accuracy": 0.8875,
+        "Precision (weighted)": 0.8876,
+        "Recall (weighted)": 0.8875,
+        "F1 (weighted)": 0.8872,
+        "ROC-AUC (OvR)": 0.9804
+      },
+      {
+        "Model": "Decision Tree",
+        "Part": "A (Review 1)",
+        "Accuracy": 0.8375,
+        "Precision (weighted)": 0.8367,
+        "Recall (weighted)": 0.8375,
+        "F1 (weighted)": 0.837,
+        "ROC-AUC (OvR)": 0.9511
+      },
+      {
+        "Model": "Naive Bayes",
+        "Part": "A (Review 1)",
+        "Accuracy": 0.81,
+        "Precision (weighted)": 0.8113,
+        "Recall (weighted)": 0.81,
+        "F1 (weighted)": 0.8105,
+        "ROC-AUC (OvR)": 0.9506
+      },
+      {
+        "Model": "KNN",
+        "Part": "A (Review 1)",
+        "Accuracy": 0.72,
+        "Precision (weighted)": 0.7219,
+        "Recall (weighted)": 0.72,
+        "F1 (weighted)": 0.7203,
+        "ROC-AUC (OvR)": 0.8792
+      }
+    ],
+    "best_model": "SVM (SVC)",
+    "best_params": "C=10, kernel=linear",
+    "best_metrics": {
+      "Accuracy": 0.975,
+      "Precision (weighted)": 0.975047504750475,
+      "Recall (weighted)": 0.975,
+      "F1 (weighted)": 0.9749993749843746,
+      "ROC-AUC (OvR)": 0.9993583333333333
+    }
+  },
+  "clustering": {
+    "k_auto_knee": 6,
+    "k_best_silhouette": 9,
+    "k_used": 10,
+    "k_sensitivity": [
+      {
+        "k": 6,
+        "Algorithm": "K-Means",
+        "Silhouette": 0.1358,
+        "Davies-Bouldin": 2.2272,
+        "Calinski-Harabasz": 180.3663,
+        "ARI": 0.533,
+        "NMI": 0.6846
+      },
+      {
+        "k": 6,
+        "Algorithm": "Agglomerative (ward)",
+        "Silhouette": 0.1266,
+        "Davies-Bouldin": 2.2364,
+        "Calinski-Harabasz": 170.5096,
+        "ARI": 0.6121,
+        "NMI": 0.7887
+      },
+      {
+        "k": 9,
+        "Algorithm": "K-Means",
+        "Silhouette": 0.1483,
+        "Davies-Bouldin": 2.2015,
+        "Calinski-Harabasz": 152.893,
+        "ARI": 0.722,
+        "NMI": 0.8
+      },
+      {
+        "k": 9,
+        "Algorithm": "Agglomerative (ward)",
+        "Silhouette": 0.1423,
+        "Davies-Bouldin": 2.2578,
+        "Calinski-Harabasz": 146.3052,
+        "ARI": 0.8136,
+        "NMI": 0.8817
+      },
+      {
+        "k": 10,
+        "Algorithm": "K-Means",
+        "Silhouette": 0.1325,
+        "Davies-Bouldin": 2.2376,
+        "Calinski-Harabasz": 145.2921,
+        "ARI": 0.8376,
+        "NMI": 0.8569
+      },
+      {
+        "k": 10,
+        "Algorithm": "Agglomerative (ward)",
+        "Silhouette": 0.1286,
+        "Davies-Bouldin": 2.2943,
+        "Calinski-Harabasz": 139.3618,
+        "ARI": 0.9026,
+        "NMI": 0.9116
+      }
+    ],
+    "pca_explained_variance": 0.2482775535619866,
+    "metrics": [
+      {
+        "Algorithm": "K-Means",
+        "Silhouette": 0.1325,
+        "Davies-Bouldin": 2.2376,
+        "Calinski-Harabasz": 145.2921,
+        "ARI": 0.8376,
+        "NMI": 0.8569
+      },
+      {
+        "Algorithm": "Agglomerative (ward)",
+        "Silhouette": 0.1286,
+        "Davies-Bouldin": 2.2943,
+        "Calinski-Harabasz": 139.3618,
+        "ARI": 0.9026,
+        "NMI": 0.9116
+      },
+      {
+        "Algorithm": "Agglomerative (complete)",
+        "Silhouette": 0.066,
+        "Davies-Bouldin": 2.5599,
+        "Calinski-Harabasz": 86.9448,
+        "ARI": 0.2962,
+        "NMI": 0.4914
+      },
+      {
+        "Algorithm": "Agglomerative (average)",
+        "Silhouette": 0.0888,
+        "Davies-Bouldin": 1.5535,
+        "Calinski-Harabasz": 61.0417,
+        "ARI": 0.3095,
+        "NMI": 0.5774
+      },
+      {
+        "Algorithm": "Agglomerative (single)",
+        "Silhouette": -0.016,
+        "Davies-Bouldin": 0.8118,
+        "Calinski-Harabasz": 1.5586,
+        "ARI": 0.0,
+        "NMI": 0.0089
+      }
+    ],
+    "linkages": [
+      {
+        "Linkage": "ward",
+        "Silhouette": 0.1286,
+        "Davies-Bouldin": 2.2943,
+        "Calinski-Harabasz": 139.3618,
+        "Largest cluster": 234,
+        "Smallest cluster": 174
+      },
+      {
+        "Linkage": "complete",
+        "Silhouette": 0.066,
+        "Davies-Bouldin": 2.5599,
+        "Calinski-Harabasz": 86.9448,
+        "Largest cluster": 483,
+        "Smallest cluster": 29
+      },
+      {
+        "Linkage": "average",
+        "Silhouette": 0.0888,
+        "Davies-Bouldin": 1.5535,
+        "Calinski-Harabasz": 61.0417,
+        "Largest cluster": 968,
+        "Smallest cluster": 1
+      },
+      {
+        "Linkage": "single",
+        "Silhouette": -0.016,
+        "Davies-Bouldin": 0.8118,
+        "Calinski-Harabasz": 1.5586,
+        "Largest cluster": 1991,
+        "Smallest cluster": 1
+      }
+    ]
+  }
+}
